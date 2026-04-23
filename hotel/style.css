@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: #e9ecef;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Toolbar */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.toolbar-left, .toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.label {
+    font-size: 13px;
+    color: #495057;
+    font-weight: 500;
+}
+
+.filter-select {
+    padding: 6px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* DEMO badge */
+.demo-badge {
+    position: relative;
+    margin: 10px 20px;
+    padding: 4px 12px;
+    background: #ffc107;
+    color: #856404;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Scheduler container */
+#scheduler {
+    width: 100%;
+    min-height: 600px;
+}
+
+/* Status styles */
+.status-dirty {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.status-cleaning {
+    color: #fd7e14;
+    font-weight: bold;
+}
+
+.status-ready {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Event styles */
+.event-item {
+    padding: 4px;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.event-name {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.event-dates {
+    font-size: 10px;
+    opacity: 0.9;
+}
+
+.event-status {
+    font-size: 10px;
+    margin-top: 2px;
+    opacity: 0.8;
+}
+
+/* DayPilot overrides */
+.scheduler_default_event {
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.scheduler_default_event_inner {
+    padding: 4px;
+}
+
+.scheduler_default_cell_header {
+    font-weight: 500;
+    background: #f8f9fa;
+}
+
+.scheduler_default_rowheader {
+    font-weight: 500;
+    background: #f8f9fa;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: #fff;
+    margin: 5% auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.close:hover {
+    color: #343a40;
+}
+
+.modal-content h3 {
+    margin-bottom: 20px;
+    color: #343a40;
+    font-size: 18px;
+}
+
+.modal-content label {
+    display: block;
+    margin: 12px 0 4px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #495057;
+}
+
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-save {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.btn-cancel {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-save:hover { background: #218838; }
+.btn-delete:hover { background: #c82333; }
+.btn-cancel:hover { background: #5a6268; }
